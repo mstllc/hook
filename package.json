@@ -1,0 +1,21 @@
+{
+  "name": "request-logger",
+  "description": "Simple endpoint to log requests for testing",
+  "version": "0.0.0",
+  "private": "true",
+  "scripts": {
+    "dev": "./node_modules/.bin/nodemon --use_strict lib/server.js",
+    "forever": "forever start -a -l forever.log -o out.log -e err.log -c 'node --use_strict' lib/server.js",
+    "start": "node --use_strict lib/server.js"
+  },
+  "dependencies": {
+    "bluebird": "^3.1.1",
+    "body-parser": "^1.14.2",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "moment": "^2.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.8.1"
+  }
+}
